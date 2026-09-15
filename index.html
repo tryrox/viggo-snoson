@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1825">
+  <title>Viggo Snøson — Filho da Neve</title>
+  <meta name="description" content="Ficha digital de Viggo Snøson, Filho da Neve, Lorde e Mão do Jarl de Dawnstar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f4f7fa;
+      --paper:#fbfdff;
+      --ink:#1a2430;
+      --muted:#5e6d7d;
+      --line:#d7e2ec;
+      --blue:#275f8c;
+      --blue-dark:#0f2a42;
+      --ice:#eaf3fa;
+      --deep:#08131d;
+      --shadow:0 18px 50px rgba(12,28,45,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.7}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1120px,calc(100% - 28px));margin:0 auto}
+    .hero{position:relative;overflow:hidden;min-height:100svh;background:
+      radial-gradient(circle at 75% 18%, rgba(166,205,236,.18), transparent 24%),
+      linear-gradient(180deg, rgba(2,10,16,.18), rgba(2,10,16,.55)),
+      linear-gradient(135deg,#132233 0%,#0b1825 38%,#1f4667 100%);
+      color:#f3f8fc;display:flex;align-items:flex-end}
+    .hero:before{content:"";position:absolute;inset:0;background:
+      linear-gradient(transparent 72%, rgba(5,14,22,.88)),
+      repeating-linear-gradient(90deg, transparent 0 110px, rgba(255,255,255,.025) 110px 111px);
+      pointer-events:none}
+    .snow,.snow:before,.snow:after{position:absolute;border-radius:50%;background:rgba(255,255,255,.6);filter:blur(.4px)}
+    .snow{width:3px;height:3px;left:15%;top:18%;box-shadow:120px 60px rgba(255,255,255,.55),220px 180px rgba(255,255,255,.7),380px 120px rgba(255,255,255,.35),540px 200px rgba(255,255,255,.7),720px 40px rgba(255,255,255,.45),920px 130px rgba(255,255,255,.55),980px 260px rgba(255,255,255,.5),770px 290px rgba(255,255,255,.45),430px 300px rgba(255,255,255,.55);animation:float 10s ease-in-out infinite}
+    .snow:before{content:"";width:2px;height:2px;left:90px;top:80px;box-shadow:200px 60px rgba(255,255,255,.45),380px -10px rgba(255,255,255,.6),560px 70px rgba(255,255,255,.55),810px 30px rgba(255,255,255,.35)}
+    .snow:after{content:"";width:4px;height:4px;left:40px;top:180px;box-shadow:220px 40px rgba(255,255,255,.5),420px 150px rgba(255,255,255,.6),600px 20px rgba(255,255,255,.45),860px 120px rgba(255,255,255,.55)}
+    @keyframes float{50%{transform:translateY(8px)}}
+    .nav{position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(1160px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.12);z-index:2}
+    .brand{font-family:Cinzel,serif;font-weight:700;letter-spacing:.14em}
+    .menu{display:flex;gap:24px;color:#dce7ef;font-size:.88rem}
+    .menu a:hover{color:#fff}
+    .hero__inner{position:relative;z-index:1;padding:160px 0 72px}
+    .eyebrow{margin:0 0 12px;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#8ab6da}
+    h1{margin:0;font:700 clamp(3rem,8vw,7rem)/.95 Cinzel,serif;text-transform:uppercase;letter-spacing:.03em}
+    .sub{margin:14px 0 4px;font:italic 600 clamp(1.6rem,3.2vw,2.5rem)/1.05 "Cormorant Garamond",serif;color:#d4e7f6}
+    .role{margin:0;text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;color:#dbe7ef;font-weight:700}
+    .quote{max-width:760px;margin:36px 0 34px;padding-left:18px;border-left:2px solid #88b8dd;font:italic 600 clamp(1.15rem,2.4vw,1.65rem)/1.55 "Cormorant Garamond",serif;color:#f6fbff}
+    .cta{display:inline-flex;align-items:center;gap:14px;padding:13px 18px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);backdrop-filter:blur(10px);text-transform:uppercase;letter-spacing:.14em;font-size:.76rem}
+    .hero-grid{margin-top:44px;display:grid;grid-template-columns:1.2fr .85fr;gap:22px}
+    .hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:18px 20px;backdrop-filter:blur(8px)}
+    .hero-card strong{display:block;margin-bottom:8px;font-family:Cinzel,serif;font-size:.92rem}
+    .hero-runes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .rune{padding:14px 12px;border:1px solid rgba(255,255,255,.13);text-align:center;background:rgba(4,14,24,.2)}
+    .rune b{display:block;font-family:Cinzel,serif;color:#9fc9ea;font-size:.74rem;text-transform:uppercase;letter-spacing:.1em}
+    .rune span{display:block;font:600 1.02rem/1.35 "Cormorant Garamond",serif}
+    section{padding:92px 0}
+    section.alt{background:linear-gradient(135deg,#eaf3fa,#f7fbff 60%,#eef6fb)}
+    section.dark{background:radial-gradient(circle at 82% 0,rgba(56,116,164,.34),transparent 26%),linear-gradient(135deg,#091421,#0d1d2d 70%,#07111b);color:#edf5fb}
+    .heading{display:flex;gap:16px;align-items:center;margin-bottom:34px}
+    .heading .num{font:600 3.5rem/1 Cinzel,serif;color:#d5e4f0}
+    .dark .heading .num{color:#295274}
+    .heading h2{margin:0;font:600 clamp(1.9rem,3.5vw,3rem)/1.1 Cinzel,serif;color:var(--blue-dark)}
+    .dark .heading h2{color:#f3f9fd}
+    .heading p{margin:0 0 6px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#7ea9cb}
+    .identity{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:30px}
+    .portrait{position:relative;min-height:520px;background:linear-gradient(180deg,#1a2e45 0%,#102030 100%);border:1px solid #ccd9e4;box-shadow:var(--shadow);overflow:hidden}
+    .portrait:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 18%, rgba(255,255,255,.15), transparent 25%),linear-gradient(180deg, rgba(255,255,255,.06), transparent 30%),repeating-linear-gradient(90deg, rgba(255,255,255,.04) 0 1px, transparent 1px 58px)}
+    .portrait:after{content:"VIGGO";position:absolute;inset:auto 20px 18px auto;font-family:Cinzel,serif;font-size:2rem;letter-spacing:.2em;color:rgba(255,255,255,.11)}
+    .portrait .frame{position:absolute;inset:20px;border:1px solid rgba(255,255,255,.28)}
+    .portrait .sigil{position:absolute;top:22px;left:22px;width:62px;height:62px;border:1px solid rgba(255,255,255,.26);display:grid;place-items:center;color:#dceaf5;font-size:1.8rem;background:rgba(255,255,255,.06)}
+    .portrait .caption{position:absolute;left:24px;right:24px;bottom:22px;color:#eff6fb}
+    .portrait .caption strong{display:block;font-family:Cinzel,serif;font-size:1.15rem}
+    .portrait .caption span{font:italic 600 1.05rem "Cormorant Garamond",serif;color:#bdd7eb}
+    .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));background:var(--paper);border-top:1px solid var(--line);border-left:1px solid var(--line);box-shadow:var(--shadow)}
+    .fact{padding:20px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:white}
+    .fact b{display:block;text-transform:uppercase;letter-spacing:.14em;font:700 .72rem Cinzel,serif;color:var(--blue);margin-bottom:6px}
+    .fact span{font:600 1.04rem/1.4 "Cormorant Garamond",serif;color:#21303c}
+    .hugr{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}
+    .panel{background:rgba(255,255,255,.82);border:1px solid #c8dce9;padding:24px;box-shadow:0 12px 35px rgba(16,46,72,.06)}
+    .panel.wide{grid-row:span 2}
+    .label{display:inline-block;margin-bottom:12px;padding:5px 10px;background:var(--blue);color:#fff;font:700 .72rem Cinzel,serif;text-transform:uppercase;letter-spacing:.12em}
+    .panel p{margin:0 0 14px}.panel p:last-child{margin-bottom:0}
+    .mini{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .mini span{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--blue);font-weight:700}
+    .mini b{font-size:.84rem}
+    .saga{position:relative;margin-left:10px}
+    .saga:before{content:"";position:absolute;left:24px;top:10px;bottom:10px;width:1px;background:linear-gradient(var(--blue),#d7e5ef)}
+    .step{position:relative;display:grid;grid-template-columns:52px 1fr;gap:24px;padding:0 0 28px}
+    .step:last-child{padding-bottom:0}
+    .step .mark{width:52px;height:52px;border:1px solid #a8c6db;background:#fff;display:grid;place-items:center;font:700 1rem Cinzel,serif;color:var(--blue);position:relative;z-index:1}
+    .step .box{padding:18px 22px;background:#fff;border:1px solid #dbe6ee;box-shadow:0 10px 26px rgba(15,42,66,.05)}
+    .relations{display:grid;gap:14px}
+    .relation{display:grid;grid-template-columns:145px 1fr;border:1px solid #244867;background:#f8fbfd;color:#1d2935;overflow:hidden}
+    .relation .avatar{display:grid;place-items:center;background:linear-gradient(180deg,#11253a,#0a1725);color:#d8eaf8;font-family:Cinzel,serif;font-size:1.45rem;letter-spacing:.08em;position:relative;min-height:145px}
+    .relation .avatar:before{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.18)}
+    .relation .avatar span{position:relative;z-index:1}
+    .relation .text{padding:18px 22px}
+    .relation h3{display:inline-block;margin:0;padding:5px 10px;background:#174b74;color:#fff;font:600 .84rem Cinzel,serif;letter-spacing:.05em}
+    .relation .kind{margin:7px 0 8px;font-size:.82rem;font-weight:700;color:#2c3e4d}
+    .relation .desc{margin:0;font-size:.85rem;color:#41505d}
+    .banner{margin-top:30px;padding:34px 26px;border:1px solid #284661;background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.02));position:relative;overflow:hidden}
+    .banner:before{content:"✦";position:absolute;right:26px;top:14px;font-size:4rem;color:rgba(255,255,255,.08)}
+    .banner strong{display:block;margin-bottom:6px;font-family:Cinzel,serif;font-size:1.1rem}
+    .banner p{margin:0;font:italic 600 1.35rem/1.5 "Cormorant Garamond",serif;color:#f6fbff}
+    footer{padding:30px 0;background:#040b12;color:#bfd0de;border-top:1px solid #183041}
+    footer .wrap{display:flex;align-items:center;gap:16px}
+    footer .seal{width:42px;height:42px;border:1px solid #2f5a7d;display:grid;place-items:center;font-size:1.1rem}
+    footer p{margin:0;font-size:.8rem;line-height:1.45}
+    footer strong{display:block;font-family:Cinzel,serif;color:#f5f9fc}
+    footer a{margin-left:auto;font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;color:#9dc3df}
+    @media (max-width:900px){.menu{display:none}.hero-grid,.identity,.hugr{grid-template-columns:1fr}.portrait{max-width:520px;width:100%;margin:0 auto}.facts{grid-template-columns:1fr 1fr}.panel.wide{grid-row:auto}}
+    @media (max-width:640px){.wrap{width:min(100% - 20px,1120px)}section{padding:70px 0}.hero__inner{padding-top:145px}.facts{grid-template-columns:1fr}.step{grid-template-columns:40px 1fr;gap:12px;padding-bottom:18px}.step .mark{width:40px;height:40px}.saga:before{left:19px}.relation{grid-template-columns:1fr}.relation .avatar{min-height:120px}.hero-grid{margin-top:30px}}
+  </style>
+</head>
+<body>
+  <header class="hero" id="topo">
+    <div class="snow" aria-hidden="true"></div>
+    <nav class="nav">
+      <a href="#topo" class="brand">✦ V. S. ✦</a>
+      <div class="menu">
+        <a href="#identidade">Identidade</a>
+        <a href="#hugr">Hugr</a>
+        <a href="#saga">Saga</a>
+        <a href="#tengsl">Tengsl</a>
+      </div>
+    </nav>
+    <div class="wrap hero__inner">
+      <p class="eyebrow">Dawnstar · SKYZ RP</p>
+      <h1>Viggo Snøson</h1>
+      <p class="sub">Filho da Neve</p>
+      <p class="role">Lorde · Mão do Jarl de Dawnstar</p>
+      <p class="quote">“Que Dawnstar jamais dependa da sorte para sobreviver ao inverno, mas da força de seu povo para prosperar apesar dele.”</p>
+      <a class="cta" href="#identidade">Abrir ficha ↓</a>
+      <div class="hero-grid">
+        <div class="hero-card">
+          <strong>Resumo</strong>
+          Viggo é um nord de Dawnstar moldado pelo frio, pelo trabalho e pela responsabilidade. Cervejeiro, fazendeiro e hoje Mão do Jarl, ele enxerga prosperidade como dever, não luxo.
+        </div>
+        <div class="hero-runes">
+          <div class="rune"><b>Trú</b><span>Kynareth</span></div>
+          <div class="rune"><b>Starf</b><span>Cervejeiro · Fazendeiro</span></div>
+          <div class="rune"><b>Staða</b><span>Nobreza</span></div>
+          <div class="rune"><b>Vápn</b><span>Machado de duas mãos</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="identidade">
+    <div class="wrap">
+      <div class="heading"><div class="num">I</div><div><p>NAFN · HEIMKYNNI · TITILL</p><h2>Identidade</h2></div></div>
+      <div class="identity">
+        <div class="portrait">
+          <div class="frame"></div>
+          <div class="sigil">❄</div>
+          <div class="caption"><strong>Viggo Snøson</strong><span>Filho da Neve</span></div>
+        </div>
+        <div class="facts">
+          <div class="fact"><b>Nafn</b><span>Viggo Snøson</span></div>
+          <div class="fact"><b>Viðurnefni</b><span>Filho da Neve</span></div>
+          <div class="fact"><b>Aldr</b><span>27 anos</span></div>
+          <div class="fact"><b>Heimkynni</b><span>Dawnstar</span></div>
+          <div class="fact"><b>Ætt</b><span>Nord</span></div>
+          <div class="fact"><b>Kyn</b><span>Masculino</span></div>
+          <div class="fact"><b>Ásthneigð</b><span>Heterossexual</span></div>
+          <div class="fact"><b>Hjúskapr</b><span>Casado com Yrsa Úlfhjarta</span></div>
+          <div class="fact"><b>Staða</b><span>Nobreza</span></div>
+          <div class="fact"><b>Titill</b><span>Lorde · Mão do Jarl de Dawnstar</span></div>
+          <div class="fact"><b>Starf</b><span>Cervejeiro · Fazendeiro</span></div>
+          <div class="fact"><b>Trú</b><span>Kynareth</span></div>
+          <div class="fact"><b>Vápn</b><span>Machado nórdico de duas mãos</span></div>
+          <div class="fact"><b>Ósk</b><span>Ver Dawnstar rica, saudável e protegida.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="hugr">
+    <div class="wrap">
+      <div class="heading"><div class="num">II</div><div><p>HUGR · EÐLI · ÓTTI · METNAÐR</p><h2>Mente & natureza</h2></div></div>
+      <div class="hugr">
+        <article class="panel wide">
+          <div class="label">Hugr</div>
+          <p>Viggo é um homem de raciocínio inquieto e postura aparentemente tranquila. Observa antes de agir e raramente aceita uma decisão apenas porque “sempre foi assim”. Precisa compreender a lógica, as consequências e o verdadeiro interesse por trás das palavras.</p>
+          <p>Sua inteligência aparece mais em perguntas do que em discursos. Pode passar bastante tempo em silêncio e, quando finalmente fala, costuma apontar justamente o problema que ninguém percebeu. Não se impressiona com títulos e julga as pessoas pelo que fazem, não pelo brasão que carregam.</p>
+          <p>É paciente com erros sinceros, mas pouco tolerante com oportunismo, abuso de poder e promessas vazias. Com quem ama, entretanto, torna-se muito mais expressivo e protetor. Confiança é seu ponto mais sensível.</p>
+        </article>
+        <article class="panel">
+          <div class="label">Eðli</div>
+          <p>Analítico, introspectivo, curioso, observador, pragmático, leal, protetor, sarcástico e teimoso quando acredita estar certo.</p>
+          <div class="mini"><span>MBTI</span><b>INTP · Neutral Good</b></div>
+        </article>
+        <article class="panel">
+          <div class="label">Ótti</div>
+          <p>Morrer pelas mãos de alguém em quem depositou sua confiança.</p>
+          <div class="label" style="margin-top:8px">Metnaðr</div>
+          <p>Tornar o povo de Dawnstar próspero e saudável, mantendo oportunistas e interesses externos longe das terras do Norte.</p>
+        </article>
+        <article class="panel">
+          <div class="label">Ást</div>
+          <p>Casado com Yrsa Úlfhjarta. Com ela, Viggo demonstra afeto com facilidade, respeita seu espaço e trata a relação como escolha — nunca como mera obrigação.</p>
+        </article>
+        <article class="panel">
+          <div class="label">Hatr</div>
+          <p>Despreza oportunistas, bajuladores e qualquer um que use poder ou riqueza para explorar o povo de Dawnstar.</p>
+          <div class="mini"><span>Hǫnd</span><b>Sem preferência definida</b></div>
+          <div class="mini"><span>Vápn</span><b>Machado nórdico de duas mãos</b></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="saga">
+    <div class="wrap">
+      <div class="heading"><div class="num">III</div><div><p>SAGA · RAÍZES · DAWNSTAR</p><h2>A história do Filho da Neve</h2></div></div>
+      <div class="saga">
+        <div class="step"><div class="mark">I</div><div class="box">Viggo Snøson nasceu em Dawnstar, filho de <b>Sohrayo Snoson</b> e <b>Freya Snoson</b>. Cresceu sem grande fortuna, mas cercado por disciplina, trabalho e histórias maiores que a própria casa.</div></div>
+        <div class="step"><div class="mark">II</div><div class="box">Sohrayo era <b>ferreiro e minerador</b>, conhecido em Dawnstar por uma força tão absurda que surgiram histórias de que ele já havia abatido <b>dentes-de-sabre com os próprios punhos</b>. Freya, por outro lado, era <b>professora de magia</b>, paciente e exigente com o conhecimento.</div></div>
+        <div class="step"><div class="mark">III</div><div class="box">Viggo cresceu entre o som do martelo na bigorna, a dureza das minas e as lições arcanas da mãe. Ainda assim, escolheu um caminho próprio: voltou-se para a terra, a colheita e a produção de cerveja.</div></div>
+        <div class="step"><div class="mark">IV</div><div class="box">Um inverno severo marcou sua juventude. Faltaram comida, madeira e remédios enquanto comerciantes lucravam com o desespero. Foi nesse período que Viggo decidiu que Dawnstar deveria prosperar apesar do inverno, e não apenas sobreviver a ele.</div></div>
+        <div class="step"><div class="mark">V</div><div class="box">Já adulto, confiou profundamente em um companheiro de trabalho, que mais tarde vendeu informações e o conduziu a uma armadilha. Viggo sobreviveu, mas o episódio fixou o medo que carrega até hoje: a traição de alguém em quem confiou.</div></div>
+        <div class="step"><div class="mark">VI</div><div class="box">Como <b>fazendeiro e cervejeiro</b>, ganhou reputação por resolver problemas concretos: colheitas, estoques, abastecimento e comércio. Seu nome começou a circular não por lendas, mas por resultados.</div></div>
+        <div class="step"><div class="mark">VII</div><div class="box">A corte passou a ouvi-lo. Primeiro veio o título de <b>Lorde</b>; depois, o posto de <b>Mão do Jarl de Dawnstar</b>. Viggo aceitou a posição como responsabilidade. Para ele, Dawnstar pertence primeiro a quem a chama de lar.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" id="tengsl">
+    <div class="wrap">
+      <div class="heading"><div class="num">IV</div><div><p>TENGSL · FAMÍLIA · LAR</p><h2>Vínculos</h2></div></div>
+      <div class="relations">
+        <article class="relation"><div class="avatar"><span>YU</span></div><div class="text"><h3>Yrsa Úlfhjarta</h3><div class="kind">Esposa · Companheira e confidente.</div><p class="desc">Yrsa é a pessoa diante de quem Viggo menos sente necessidade de medir palavras. Com ela, sua racionalidade deixa espaço para afeto, humor e uma confiança que ele raramente concede a alguém.</p></div></article>
+        <article class="relation"><div class="avatar"><span>FS</span></div><div class="text"><h3>Freya Snoson</h3><div class="kind">Mãe · Professora de magia e conselheira.</div><p class="desc">Freya mostrou a Viggo que conhecimento também pode ser uma forma de poder. Mesmo sem seguir o mesmo caminho arcano, herdou dela a curiosidade, o hábito de questionar e a necessidade de compreender antes de agir.</p></div></article>
+        <article class="relation"><div class="avatar"><span>SS</span></div><div class="text"><h3>Sohrayo Snoson</h3><div class="kind">Pai · Ferreiro, minerador e exemplo.</div><p class="desc">Sohrayo foi a primeira referência de força e disciplina de Viggo. Em Dawnstar, era conhecido tanto pelo trabalho duro quanto pelas histórias de enfrentar dentes-de-sabre com os próprios punhos.</p></div></article>
+        <article class="relation"><div class="avatar"><span>DS</span></div><div class="text"><h3>Dawnstar</h3><div class="kind">Lar · Terra natal e dever.</div><p class="desc">Viggo não enxerga Dawnstar apenas como cidade natal. Para ele, cada fazenda, mina, forja e família faz parte de algo que precisa ser protegido.</p></div></article>
+        <article class="relation"><div class="avatar"><span>LT</span></div><div class="text"><h3>LunnaBella a Timida</h3><div class="kind">Cunhada · Irmã de Yrsa.</div><p class="desc">Viggo ainda conhece pouco sobre LunnaBella. Além do nome e de saber que é irmã de Yrsa, prefere não preencher o que ainda não conhece com suposições.</p></div></article>
+        <article class="relation"><div class="avatar"><span>DU</span></div><div class="text"><h3>Dante Úlfhjarta</h3><div class="kind">Cunhado · Irmão de Yrsa.</div><p class="desc">Viggo ainda conhece pouco sobre Dante. Sabe que ele é irmão de Yrsa e, por isso, parte de uma família que Viggo respeita e prefere conhecer sem pressa.</p></div></article>
+      </div>
+      <div class="banner"><strong>Dawnstar</strong><p>“Para ele, Dawnstar pertence primeiro a quem a chama de lar.”</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="seal">❄</div>
+      <p><strong>Viggo Snøson</strong>Filho da Neve · Dawnstar · SKYZ RP</p>
+      <a href="#topo">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
